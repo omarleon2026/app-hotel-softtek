@@ -8,22 +8,11 @@ import jakarta.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Reservas {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class Reservas extends Huespedes{
     private Date fechaEntrada;
     private Date fechaSalida;
     private double valor;
     private String formaPago;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public Date getFechaEntrada() {
         return fechaEntrada;
